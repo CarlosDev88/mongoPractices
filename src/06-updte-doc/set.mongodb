@@ -1,0 +1,12 @@
+use("platzi_store");
+db.products.updateOne(
+  {
+    _id: 2,
+  },
+  {
+    $set: {
+      name: "change name",
+      tags: ["tag 1", "tag 2"],
+    },
+  }
+);

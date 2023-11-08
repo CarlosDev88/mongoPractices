@@ -1,0 +1,35 @@
+use("platzi_store");
+db.products.drop();
+db.products.insertMany(
+  [
+    {
+      _id: 1,
+      name: "keboard",
+      price: 90,
+    },
+    {
+      _id: 2,
+      name: "headsets",
+      price: 60,
+    },
+    {
+      _id: 3,
+      name: "cables",
+      price: 10,
+    },
+    {
+      _id: 4,
+      name: "conectores",
+      price: 30,
+    },
+    {
+      name: "cables tipo c",
+      price: 30,
+    },
+  ],
+  {
+    ordered: false,
+  }
+);
+
+db.products.find();
