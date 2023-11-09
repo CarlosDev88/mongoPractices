@@ -1,0 +1,35 @@
+use("platzi_store");
+
+//NOTA:Pull lo que hace es borrar datos de un array
+
+//actualizar todos los elementos con un array de tags
+db.inventory.updateMany(
+  {},
+  {
+    $pull: {
+      tags: {
+        $in: ["book", "headphone", "appliance"],
+      },
+    },
+  }
+);
+
+//actualizar todos los elementos
+// db.inventory.updateMany(
+//   {},
+//   {
+//     $pull: {
+//       tags: "book",
+//     },
+//   }
+// );
+
+//actualizar solo un elemento por id
+// db.inventory.updateOne(
+//   { _id: 4 },
+//   {
+//     $pull: {
+//       tags: "headphone",
+//     },
+//   }
+// );

@@ -1,0 +1,32 @@
+// crear un atributo
+// use("sample_training");
+// db.zips.updateMany(
+//   { city: "CLEVELAND" },
+//   {
+//     $set: {
+//       myAtr: "new value",
+//     },
+//   }
+// );
+
+// renombra un atributo
+// use("sample_training");
+// db.zips.updateMany(
+//   { city: "CLEVELAND" },
+//   {
+//     $rename: {
+//       myAtr: "my_data",
+//     },
+//   }
+// );
+
+//Borrar un atributo
+use("sample_training");
+db.zips.updateMany(
+  { city: "CLEVELAND" },
+  {
+    $unset: {
+      my_data: "",
+    },
+  }
+);

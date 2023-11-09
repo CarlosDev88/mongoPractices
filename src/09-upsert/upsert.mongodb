@@ -1,0 +1,19 @@
+use("platzi_store");
+
+//esto es util porque si el registro no existe
+//se crea uno nuevo y si existe se actualiza
+
+db.iot.updateOne(
+  {
+    sensor: "A001",
+    date: "2022-01-04",
+  },
+  {
+    $push: {
+      readings: 1420,
+    },
+  },
+  {
+    upsert: true,
+  }
+);
